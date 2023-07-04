@@ -18,6 +18,7 @@ packer.startup(function(use)
   use "xiyaowong/transparent.nvim"
   use "tpope/vim-fugitive"
   use "tpope/vim-surround"
+  use "NeogitOrg/neogit"
   use "nvim-tree/nvim-web-devicons"
   use "nvim-treesitter/nvim-treesitter-context"
   use 'Vigemus/iron.nvim'
