@@ -15,4 +15,4 @@ end
 local colorscheme = require("utils.colorscheme")
 --vim.api.nvim_set_hl(0, "Normal", {fg = "black" } )
 --vim.cmd.hi("Normal guifg=black")
---vim.cmd.colorscheme(colorscheme)
+vim.cmd.colorscheme(colorscheme)

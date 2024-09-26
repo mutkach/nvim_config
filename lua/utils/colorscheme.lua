@@ -14,12 +14,15 @@ local function get_if_available(name, opts)
 end
 
 -- Uncomment the colorscheme to use
-local colorscheme = get_if_available("catppuccin")
--- local colorscheme = get_if_available('gruvbox')
--- local colorscheme = get_if_available('rose-pine')
--- local colorscheme = get_if_available('everforest')
--- local colorscheme = get_if_available('melange')
+--local colorscheme = get_if_available("moonfly")
+--local colorscheme = get_if_available('moonfly')
+--local colorscheme = get_if_available('rose-pine')
+--local colorscheme = get_if_available('everforest')
+--local colorscheme = get_if_available('melange')
+--local colorscheme = get_if_available("Atelier_CaveLight")
 local colorscheme = get_if_available("Atelier_CaveLight")
---local colorscheme = get_if_available("Atelier_SulphurpoolLight")
+--local colorscheme = get_if_available("carbonfox")
+--local colorscheme = get_if_available("solarized-osaka-night")
+
 
 return colorscheme

@@ -73,7 +73,7 @@ return {
 				lsp_map("gd", vim.lsp.buf.definition, bufnr, "Goto Definition")
 				lsp_map("gr", require("telescope.builtin").lsp_references, bufnr, "Goto References")
 				lsp_map("gI", vim.lsp.buf.implementation, bufnr, "Goto Implementation")
-				lsp_map("K", vim.lsp.buf.hover, bufnr, "Hover Documentation")
+				lsp_map("<leader>k", vim.lsp.buf.hover, bufnr, "Hover Documentation")
 				lsp_map("gD", vim.lsp.buf.declaration, bufnr, "Goto Declaration")
 
 				-- Create a command `:Format` local to the LSP buffer
@@ -90,7 +90,6 @@ return {
 			-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-
 			-- Lua
 			require("lspconfig")["lua_ls"].setup({
 				on_attach = on_attach,
