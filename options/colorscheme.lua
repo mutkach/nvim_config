@@ -10,4 +10,9 @@ NextColorScheme = function()
     vim.cmd("colorscheme " .. schemes[iter])
 end
 
-vim.cmd [[colorscheme vim]]
+PrevColorScheme = function()
+    iter = (iter-2) % #schemes + 1
+    vim.cmd("colorscheme " .. schemes[iter])
+end
+
+vim.cmd [[colorscheme Atelier_SulphurpoolDark]]

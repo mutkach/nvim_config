@@ -26,6 +26,30 @@ return require('packer').startup(function(use)
       'atelierbram/vim-colors_atelier-schemes'
   }
 
+  use {
+      'sontungexpt/witch'
+  }
+
+  use {
+      'tpope/vim-surround'
+  }
+
+  use {
+      'ericbn/vim-solarized'
+  }
+  use {
+      'projekt0n/github-nvim-theme'
+  }
+
+  use {
+      'folke/trouble.nvim'
+  }
+
+
+  use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
 
 end)

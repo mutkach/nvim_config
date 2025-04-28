@@ -7,11 +7,3 @@ vim.opt.syntax = "on"
 vim.opt.signcolumn = 'yes'
 
 vim.g.mapleader = " "
-
-vim.cmd.nnoremap [[<leader>b :ls<CR>]]
-vim.cmd.nnoremap [[<leader>b :ls<CR>]]
-vim.cmd.nnoremap [[<leader>y "+y<CR>]]
-vim.cmd.nnoremap [[<leader>p "+p<CR>]]
-
-
-
