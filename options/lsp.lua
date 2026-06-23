@@ -1,4 +1,3 @@
-local lspconfig = require('lspconfig')
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -26,11 +25,26 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- require('mason').setup()
 -- require('mason-lspconfig').setup()
 
-lspconfig.pyright.setup({capabilities = lsp_capabilities})
-lspconfig.lua_ls.setup({capabilities = lsp_capabilities})
-lspconfig.rust_analyzer.setup({capabilities = lsp_capabilities})
-lspconfig.clangd.setup({capabilities = lsp_capabilities})
-lspconfig.hls.setup({capabilities = lsp_capabilities})
+vim.lsp.config('pyright', {capabilities = lsp_capabilities})
+vim.lsp.config('lua_ls', {
+  capabilities = lsp_capabilities,
+  settings = {
+    Lua = {
+      runtime = { version = "LuaJIT" },
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("lua", true),
+      },
+    },
+  },
+})
+vim.lsp.config('rust_analyzer', {capabilities = lsp_capabilities})
+vim.lsp.config('clangd', {capabilities = lsp_capabilities})
+vim.lsp.config('hls', {capabilities = lsp_capabilities})
+
+vim.lsp.enable({'pyright', 'lua_ls', 'rust_analyzer', 'clangd', 'hls'})
 
 local cmp = require('cmp')
 

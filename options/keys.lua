@@ -6,6 +6,9 @@ local wk = require("which-key")
 vim.keymap.set('n', '<leader>c', NextColorScheme, { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>C', PrevColorScheme, { noremap = true, silent = false })
 
+vim.keymap.set('n', '0', '^', { noremap = true })
+vim.keymap.set('n', '^', '0', { noremap = true })
+
 vim.keymap.set('n', '<leader>?', function()
     require("which-key").show({ global = false, layout='helix' })
       end, { noremap = true, silent = false })
